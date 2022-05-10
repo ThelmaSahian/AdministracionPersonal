@@ -23,11 +23,12 @@ if(isset($_POST['submit'])){
 
       }elseif($row['user_type'] == 'user'){
 
+         $_SESSION['user_id'] = $row['id'];
          $_SESSION['user_name'] = $row['name'];
          header('location:user_page.php');
 
       }
-     
+
    }else{
       $error[] = 'Cuenta o contraseña incorrecta';
    }
@@ -45,10 +46,10 @@ if(isset($_POST['submit'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
-
+   
 </head>
 <body>
-   
+
 <div class="form-container">
 
    <form action="" method="post">
@@ -60,7 +61,7 @@ if(isset($_POST['submit'])){
          };
       };
       ?>
-      
+
       <input type="email" name="email" required placeholder="Ingresa tu email">
       <input type="password" name="password" required placeholder="Ingresa tu contraseña">
       <input type="submit" name="submit" value="Login" class="form-btn">
