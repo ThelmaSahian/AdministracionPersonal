@@ -32,8 +32,8 @@ if(!isset($_SESSION['admin_name'])){
       <h1>bienvenido <span><?php echo $_SESSION['admin_name'] ?></span></h1>
       <p>estas es una pagina de administrador</p>
       <a href="viewPage.php" class="btn">Empleados</a>
-      <a href="register_form.php" class="btn">Registrar</a>
       <a href="recursos.php" class="btn">Recursos</a>
+      <a href="recursos.php" class="btn">Lista de asistencia</a>
       <a href="logout.php" class="btn">Logout</a>
    </div>
 
