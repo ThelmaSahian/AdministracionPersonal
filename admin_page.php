@@ -33,7 +33,7 @@ if(!isset($_SESSION['admin_name'])){
       <p>estas es una pagina de administrador</p>
       <a href="viewPage.php" class="btn">Empleados</a>
       <a href="recursos.php" class="btn">Recursos</a>
-      <a href="recursos.php" class="btn">Lista de asistencia</a>
+      <a href="asistencia.php" class="btn">Lista de asistencia</a>
       <a href="logout.php" class="btn">Logout</a>
    </div>
 
