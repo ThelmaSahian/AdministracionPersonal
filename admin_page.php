@@ -8,6 +8,7 @@ if(!isset($_SESSION['admin_name'])){
    header('location:login_form.php');
 }
 
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +24,7 @@ if(!isset($_SESSION['admin_name'])){
 
 </head>
 <body>
-   
+
 <div class="container">
 
    <div class="content">

@@ -29,6 +29,7 @@ if(isset($_POST['submit'])){
       }else{
          $insert = "INSERT INTO user_form (name, email, numero, direccion, rfc, curp, password, user_type) VALUES('$name','$email','$numero','$direccion','$rfc','$curp','$pass','$user_type')";
          mysqli_query($conn, $insert);
+         
          header('location:login_form.php');
       }
    }
@@ -51,7 +52,7 @@ if(isset($_POST['submit'])){
 
 </head>
 <body>
-   
+
 <div class="form-container">
 
    <form action="" method="post">
