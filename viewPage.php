@@ -89,7 +89,7 @@
             <div class="container2">
 
    <div class="content2">
-
+    <a href="register_form.php" class="btn">Registrar</a>
    <a href="logout.php" class="btn">Logout</a>
    </div>
 
