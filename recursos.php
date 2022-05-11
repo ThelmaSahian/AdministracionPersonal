@@ -54,8 +54,8 @@
                 <th>Código Producto</th>
                 <th>Nombre</th>
                 <th>Descripci&oacute;n</th>
+		<th>Unidad de Medida</th>
                 <th>Cantidad</th>
-                <th>Unidad de Medida</th>
                 <th>Precio</th>
             </tr>
             </thread>
