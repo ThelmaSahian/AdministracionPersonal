@@ -90,6 +90,7 @@
    <div class="content2">
 
    <a href="logout.php" class="btn">Logout</a>
+   <a href="admin_page.php" class="btn">Regresar</a>
    </div>
 
 </div>

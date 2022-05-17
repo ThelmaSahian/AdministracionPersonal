@@ -90,7 +90,7 @@
 
    <div class="content2">
     <a href="register_form.php" class="btn">Registrar</a>
-   <a href="logout.php" class="btn">Logout</a>
+   <a href="admin_page.php" class="btn">Regresar</a>
    </div>
 
 </div>
