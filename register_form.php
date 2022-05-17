@@ -65,8 +65,8 @@ if(isset($_POST['submit'])){
       <input type="email" name="email" required placeholder="Ingresa tu correo">
       <input type="number" name="numero" required placeholder="Ingresa un numero de contacto">
       <input type="text" name="direccion" required placeholder="Ingresa la direccion de tu casa" maxlength="35">
-      <input type="text" name="rfc" required placeholder="Favor de ingresar tu rfc">
-      <input type="text" name="curp" required placeholder="Favor de ingresar tu curp">
+      <input type="text" name="rfc" required placeholder="Favor de ingresar tu rfc" maxlength="13">
+      <input type="text" name="curp" required placeholder="Favor de ingresar tu curp" maxlength="18">
       <input type="password" name="password" required placeholder="Ingresa tu contraseña">
       <input type="password" name="cpassword" required placeholder="Confirma tu contraseña">
       <select name="user_type">
