@@ -39,7 +39,7 @@
    background: crimson;
 }
         </style>
-    
+
 
 </head>
 <body>
@@ -60,7 +60,7 @@
             </tr>
             </thread>
             <tbody>
-                <?php 
+                <?php
                 if($result -> num_rows > 0 ){
                     while ($row = $result -> fetch_assoc()){
 
@@ -88,7 +88,7 @@
             <div class="container2">
 
    <div class="content2">
-
+   <a href="pdfs/pdf_recursos.php" class="btn" target="_blank">Ver PDF</a>
    <a href="logout.php" class="btn">Logout</a>
    <a href="admin_page.php" class="btn">Regresar</a>
    </div>
@@ -96,13 +96,3 @@
 </div>
             </body>
             </html>
-
-
-
-
-
-
-
-
-
-
