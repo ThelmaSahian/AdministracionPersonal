@@ -16,6 +16,31 @@
    <!-- custom css file link  -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+       <style>
+
+       .container2{
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          padding:20px;
+          padding-bottom: 60px;
+       }
+
+       .container2 .content2 .btn{
+          display: inline-block;
+          padding:10px 30px;
+          font-size: 20px;
+          background: #333;
+          color:#fff;
+          margin:0 5px;
+          text-transform: capitalize;
+       }
+
+       .container2 .content2 .btn:hover{
+          background: crimson;
+       }
+           </style>
+
 </head>
 <body>
 
@@ -54,7 +79,10 @@
 
   </table>
 
-
+<div class="container2">
+  <div class="content2">
+    <a href="pdfs/pdf_asistencia.php" class="btn" target="_blank">Ver PDF</a>
+  </div>
 </div>
 
 </body>
