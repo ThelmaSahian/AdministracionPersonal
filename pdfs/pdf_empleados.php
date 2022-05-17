@@ -13,7 +13,7 @@ $pdf->AddPage();
 $pdf->SetFont('Arial','',16);
 $pdf->Cell(40,10,utf8_decode('Reporte de Empleados'));
 $pdf->Ln(15);
-$pdf->SetFont('Arial','',12);
+$pdf->SetFont('Arial','',10);
 
 $pdf->SetDrawColor(255, 255, 255);
 $pdf->SetTextColor(255, 255, 255);

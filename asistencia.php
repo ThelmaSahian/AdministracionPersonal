@@ -83,13 +83,8 @@
 <div class="container2">
   <div class="content2">
     <a href="pdfs/pdf_asistencia.php" class="btn" target="_blank">Ver PDF</a>
+    <a href="admin_page.php" class="btn">Regresar</a>
   </div>
-</div>
-<div class="container2">
-
-<div class="content2">
-<a href="admin_page.php" class="btn">Regresar</a>
-</div>
 
 </div>
 </body>
