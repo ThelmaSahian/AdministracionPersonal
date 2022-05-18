@@ -61,9 +61,11 @@
             </thread>
             <tbody>
                 <?php
+		
                 if($result -> num_rows > 0 ){
                     while ($row = $result -> fetch_assoc()){
-
+			$number = $row['Precio'];
+			$numberFormat = number_format($number, 2, '.', ',');
                 ?>
 
                 <tr>
@@ -72,7 +74,7 @@
                     <td> <?php echo $row['DescripcionProducto']; ?> </td>
                     <td> <?php echo $row['UnidadMedida']; ?> </td>
                     <td> <?php echo $row['Cantidad']; ?> </td>
-                    <td> <?php echo $row['Precio']; ?> </td>
+                    <td> <?php echo $numberFormat; ?> </td>
                     <td><a class= "btn btn-info" href="update_recursos.php?IdProducto=<?php echo $row["IdProducto"]; ?>" >
                     Editar </a>&nbsp <a class = "btn btn-danger" href="delete_recursos.php?IdProducto=<?php echo $row['IdProducto']; ?>">
                     Borrar</a></td>
