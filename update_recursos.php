@@ -12,16 +12,25 @@
         $Cantidad = mysqli_real_escape_string ($conn, $_POST['Cantidad']);
         $Precio = mysqli_real_escape_string ($conn, $_POST['Precio']);
 
+	$selectExist = " SELECT * FROM materia_prima WHERE NombreProducto = '$NombreProducto' ";
 
-        $sql = "UPDATE materia_prima SET NombreProducto= '$NombreProducto', DescripcionProducto = '$DescripcionProducto', UnidadMedida = '$UnidadMedida', Cantidad = '$Cantidad', Precio = '$Precio' WHERE IdProducto = '$IdProducto'";
-        $result = $conn ->query ($sql);
+   	$resultExist = mysqli_query($conn, $selectExist );
+
+   	if(mysqli_num_rows($resultExist ) > 0){
+
+      		$error[] = "Existe un producto con el código $NombreProducto. Favor de validar.";
+
+   	}else{
+        	$sql = "UPDATE materia_prima SET NombreProducto= '$NombreProducto', DescripcionProducto = '$DescripcionProducto', UnidadMedida = '$UnidadMedida', Cantidad = '$Cantidad', Precio = '$Precio' WHERE IdProducto = '$IdProducto'";
+        	$result = $conn ->query ($sql);
 		
-	if($result == TRUE){
-            echo "
-            <center><h2>Información actualizada correctamente</h2></center>";
-       	}else{
-            echo "Error: ". $sql."<br>" .$conn ->error;
-       	}
+		if($result == TRUE){
+            	echo "
+            	<center><h2>Información actualizada correctamente</h2></center>";
+       		}else{
+            		echo "Error: ". $sql."<br>" .$conn ->error;
+       		}
+	}
     }
 
     if(isset($_GET['IdProducto'])){

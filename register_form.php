@@ -14,20 +14,23 @@ if(isset($_POST['submit'])){
    $cpass = md5($_POST['cpassword']);
    $user_type = $_POST['user_type'];
 
-   $select = " SELECT * FROM user_form WHERE email = '$email'";
+   $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
 
    $result = mysqli_query($conn, $select);
 
    if(mysqli_num_rows($result) > 0){
+
       $error[] = 'El usuario ya existe';
+
    }else{
+
       if($pass != $cpass){
          $error[] = 'La contraseña no coincide';
       }else{
          $insert = "INSERT INTO user_form (name, email, numero, direccion, rfc, curp, password, user_type) VALUES('$name','$email','$numero','$direccion','$rfc','$curp','$pass','$user_type')";
          mysqli_query($conn, $insert);
          
-         header('location:login_form.php');
+         header('location:viewPage.php');
       }
    }
 
@@ -64,9 +67,9 @@ if(isset($_POST['submit'])){
       <input type="text" name="name" required placeholder="Ingresa tu nombre">
       <input type="email" name="email" required placeholder="Ingresa tu correo">
       <input type="number" name="numero" required placeholder="Ingresa un numero de contacto">
-      <input type="text" name="direccion" required placeholder="Ingresa la direccion de tu casa" maxlength="35">
-      <input type="text" name="rfc" required placeholder="Favor de ingresar tu rfc" maxlength="13">
-      <input type="text" name="curp" required placeholder="Favor de ingresar tu curp" maxlength="18">
+      <input type="text" name="direccion" required placeholder="Ingresa la direccion de tu casa">
+      <input type="text" name="rfc" required placeholder="Favor de ingresar tu rfc">
+      <input type="text" name="curp" required placeholder="Favor de ingresar tu curp">
       <input type="password" name="password" required placeholder="Ingresa tu contraseña">
       <input type="password" name="cpassword" required placeholder="Confirma tu contraseña">
       <select name="user_type">

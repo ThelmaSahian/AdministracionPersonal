@@ -51,10 +51,10 @@
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Email</th>
-                <th>Numero</th>
-                <th>Direccion</th>
-                <th>Rfc</th>
-                <th>Curp</th>
+                <th>Número</th>
+                <th>Dirección</th>
+                <th>RFC</th>
+                <th>CURP</th>
                 <th>Tipo de usuario</th>
             </tr>
             </thread>
